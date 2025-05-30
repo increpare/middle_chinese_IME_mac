@@ -72,7 +72,7 @@ for (var key in result) {
 }
 fs.writeFileSync('processed.csv', csv);
 
-var sagartplugin = `# (c) Apple Inc. 2021
+var sagartplugin = `# (c) Apple Inc. 2025
 # Sample plug-in input source rule file.
 # The # character is used to indicate comments.
 # The file format must be plain text. The file encoding must be Unicode (UTF-16) with or without an initial BOM (Byte Order Mark).
@@ -83,11 +83,11 @@ var sagartplugin = `# (c) Apple Inc. 2021
 #
 METHOD: TABLE
 #
-# ENCODE: This indicates whether the target is Traditional Chinese (“TC”), Simplified Chinese (“SC”) or Unicode (“Unicode”). All plug-in input sources appear as Unicode input sources in the Input Sources pane of Keyboard preferences.
+# ENCODE: This indicates whether the target is Traditional Chinese (“TC”), Simplified Chinese (“SC”) or Unicode (“Unicode”). All plug-in input sources appear as Unicode input sources in Keyboard settings.
 #
 ENCODE: TC
 #
-# PROMPT: This is the name of the plug-in, shown in the Input Sources pane of Keyboard preferences and the Input menu.
+# PROMPT: This is the name of the plug-in, shown in the list of input sources in Keyboard settings and the Input menu.
 #
 PROMPT: Middle_Chinese
 #
@@ -98,7 +98,7 @@ DELIMITER: ,
 #
 # VERSION: This is used to indicate the version number of your plug-in.
 #
-VERSION: 1.0
+VERSION: 1.1
 #
 # MAXINPUTCODE: The limit of the number of characters that can be input for a single conversion.
 # There is no limit unless you specify one.
