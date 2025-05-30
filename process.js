@@ -79,11 +79,11 @@ var sagartplugin = `# (c) Apple Inc. 2025
 # The file consists of a number of tags, in uppercase ending with a colon, followed by the content of the tag.
 #
 # METHOD: This is the first entry in the file, defining the method used to implement the plug-in.
-# The only method currently supported is “TABLE”.
+# The only method currently supported is "TABLE".
 #
 METHOD: TABLE
 #
-# ENCODE: This indicates whether the target is Traditional Chinese (“TC”), Simplified Chinese (“SC”) or Unicode (“Unicode”). All plug-in input sources appear as Unicode input sources in Keyboard settings.
+# ENCODE: This indicates whether the target is Traditional Chinese ("TC"), Simplified Chinese ("SC") or Unicode ("Unicode"). All plug-in input sources appear as Unicode input sources in Keyboard settings.
 #
 ENCODE: TC
 #
@@ -98,7 +98,7 @@ DELIMITER: ,
 #
 # VERSION: This is used to indicate the version number of your plug-in.
 #
-VERSION: 1.1
+VERSION: 1.2
 #
 # MAXINPUTCODE: The limit of the number of characters that can be input for a single conversion.
 # There is no limit unless you specify one.
@@ -107,7 +107,7 @@ MAXINPUTCODE: 8
 #
 # VALIDINPUTKEY: The set of characters that can be used for input strings. These are case-insensitive but must be entered as one complete set.
 #
-VALIDINPUTKEY: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,,.?!,:;()<>[]{}
+VALIDINPUTKEY: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,.?!,:;()<>[]{}'
 #
 # BEGINCHARACTER: This tag begins the definitions for the mappings and is required.
 # The format for each mapping is:
@@ -123,4 +123,4 @@ ${csv}
 #
 ENDCHARACTER`
 
-fs.writeFileSync('sagart.inputplugin', sagartplugin,'utf16le');
+fs.writeFileSync('sagart.inputplugin', '\ufeff' + sagartplugin, 'utf16le');
