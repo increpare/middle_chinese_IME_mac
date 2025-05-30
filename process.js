@@ -20,7 +20,7 @@ console.log("loaded with " + ad_hoc_entries.length + " entries");
 for (var i = 0; i < ad_hoc_entries.length; i++) {
     var value = ad_hoc_entries[i];
     //entries splits on any whitespace (space+ or tab)
-    var entries = value.split(/\s+/);
+    var entries = value.split(/\t+/);
     var key = entries[1];
     var value = entries[0];
     //if value is alphanumeric, skip
@@ -54,7 +54,7 @@ for (var key in result) {
         if (frequencydict[b] != undefined) {
             bfrequency = frequencydict[b];
         }
-        return frequencydict[a] - frequencydict[b];
+        return bfrequency - afrequency;
     });
     result[key] = entries;
 }
